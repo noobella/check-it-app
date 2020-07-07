@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager2.setCurrentItem(1);
 
         /**
-         * Set tabs to each fragment depending on the position value of {@link MainActivity#viewPager2}
+         * Set tabs to each fragment depending on the position value of {@value MainActivity#viewPager2}
          */
         new TabLayoutMediator(tabLayout, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
@@ -66,6 +66,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }).attach();
-
     }
 }

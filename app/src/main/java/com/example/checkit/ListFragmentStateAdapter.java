@@ -10,12 +10,20 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class ListFragmentStateAdapter extends FragmentStateAdapter {
 
+    /**
+     * Class name for logging
+     */
     private static final String LOG_TAG = ListFragmentStateAdapter.class.getSimpleName();
 
     public ListFragmentStateAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);
     }
 
+    /**
+     * Returns a new fragment depending on the value of position
+     * @param position Value depends on
+     * @return A new fragment
+     */
     @NonNull
     @Override
     public Fragment createFragment(int position) {
