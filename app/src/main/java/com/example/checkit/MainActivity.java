@@ -25,7 +25,7 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
 
     /**
-     * Class name for logging
+     * String of class name for logging
      */
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
@@ -34,23 +34,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /**
-         * Find views
-         */
+        // Find views
         TabLayout tabLayout = findViewById(R.id.tablayout_activity_main);
         ViewPager2 viewPager2 = findViewById(R.id.viewpager_activity_main);
 
         final ListFragmentStateAdapter listFragmentStateAdapter = new ListFragmentStateAdapter(getSupportFragmentManager(), getLifecycle());
 
-        /**
-         * Set viewPager and set initial fragment to the second fragment (refer to {@link listFragmentStateAdapter#createFragment}
-         */
+        // Set viewPager and set initial fragment to the second fragment (refer to {@link listFragmentStateAdapter#createFragment}
         viewPager2.setAdapter(listFragmentStateAdapter);
         viewPager2.setCurrentItem(1);
 
-        /**
-         * Set tabs to each fragment depending on the position value of {@value MainActivity#viewPager2}
-         */
+        // Set tabs to each fragment depending on the position value of {@value MainActivity#viewPager2}
         new TabLayoutMediator(tabLayout, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {

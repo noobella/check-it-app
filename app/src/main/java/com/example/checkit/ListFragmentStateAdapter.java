@@ -11,7 +11,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 public class ListFragmentStateAdapter extends FragmentStateAdapter {
 
     /**
-     * Class name for logging
+     * String of class name for logging
      */
     private static final String LOG_TAG = ListFragmentStateAdapter.class.getSimpleName();
 
@@ -21,7 +21,7 @@ public class ListFragmentStateAdapter extends FragmentStateAdapter {
 
     /**
      * Returns a new fragment depending on the value of position
-     * @param position Value depends on
+     * @param position Value depends on viewpager
      * @return A new fragment
      */
     @NonNull
@@ -35,6 +35,10 @@ public class ListFragmentStateAdapter extends FragmentStateAdapter {
         }
     }
 
+    /**
+     * Returns the number of fragments
+     * @return Fragment count
+     */
     @Override
     public int getItemCount() {
         return 4;
