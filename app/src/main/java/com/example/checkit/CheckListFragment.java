@@ -1,5 +1,6 @@
 package com.example.checkit;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -77,7 +78,7 @@ public class CheckListFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getContext(), EditActivity.class));
             }
         });
 
