@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -41,7 +43,7 @@ public class CheckListFragment extends Fragment {
         View fragmentLayout = inflater.inflate(R.layout.fragment_check_list, container, false);
         ListView fragmentListView = fragmentLayout.findViewById(R.id.listview_checklist_fragment);
         TextView title = fragmentLayout.findViewById(R.id.title_checklist_fragment);
-        TextView button = fragmentLayout.findViewById(R.id.button_checklist_fragment);
+        FloatingActionButton button = fragmentLayout.findViewById(R.id.button_checklist_fragment);
 
         Calendar calendar = Calendar.getInstance(Locale.ENGLISH);
         String week = calendar.getDisplayName(Calendar.WEEK_OF_MONTH, Calendar.LONG_FORMAT, Locale.ENGLISH);
