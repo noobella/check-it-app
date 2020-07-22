@@ -13,11 +13,23 @@
         android:layout_height="wrap_content">
     </com.google.android.material.tabs.TabLayout>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewpager_activity_main"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-    </androidx.viewpager2.widget.ViewPager2>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager_activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.viewpager2.widget.ViewPager2>
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_checklist_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_gravity="bottom|right">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </FrameLayout>
 </LinearLayout>

@@ -44,7 +44,7 @@ public class CheckListFragment extends Fragment {
         View fragmentLayout = inflater.inflate(R.layout.fragment_check_list, container, false);
         ListView fragmentListView = fragmentLayout.findViewById(R.id.listview_checklist_fragment);
         TextView title = fragmentLayout.findViewById(R.id.title_checklist_fragment);
-        FloatingActionButton button = fragmentLayout.findViewById(R.id.button_checklist_fragment);
+        //FloatingActionButton button = fragmentLayout.findViewById(R.id.button_checklist_fragment);
 
         Calendar calendar = Calendar.getInstance(Locale.ENGLISH);
         String week = calendar.getDisplayName(Calendar.WEEK_OF_MONTH, Calendar.LONG_FORMAT, Locale.ENGLISH);
@@ -74,14 +74,6 @@ public class CheckListFragment extends Fragment {
 
         CheckListArrayAdapter checkListArrayAdapter = new CheckListArrayAdapter(getContext(), checkItemArrayList);
         fragmentListView.setAdapter(checkListArrayAdapter);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), EditActivity.class));
-            }
-        });
-
 
         return fragmentLayout;
     }
