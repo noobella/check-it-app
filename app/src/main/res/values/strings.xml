@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">Check-It</string>
+    <string name="app_name">Check It</string>
     <string name="monthly">Monthly</string>
     <string name="weekly">Weekly</string>
     <string name="daily">Daily</string>
     <string name="archive">Archive</string>
     <string name="current_week">"Week %s"</string>
+    <string name="add_text">Add your text here...</string>
+    <string name="to_do">To do: </string>
+    <string name="save">Save</string>
 </resources>
